@@ -9,4 +9,6 @@ Bourne shells and Z shell and piping to term \
 Wild bugs that sly with bool on their whiles \
 These are few of my favorite things.
 
-A pla
+# Table of Contents
+[Quick view](https://www.url.com)
+[One-liners](https://www.url.com)
