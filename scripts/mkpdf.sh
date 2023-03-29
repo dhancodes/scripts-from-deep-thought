@@ -65,15 +65,15 @@ mdtype() { \
 
 case "$ext" in
 	djvu) ddjvu -format=pdf "$1" "$base".pdf;;
-     	md) mdtype "$1" ;;
-     	ps) ps2pdf "$1";;
+	md) mdtype "$1" ;;
+	ps) ps2pdf "$1";;
 	odt) unoconv -f pdf "$1";;
 	ods) unoconv -f pdf "$1";;
 	xlsx) unoconv -f pdf "$1";;
 	doc) unoconv -f pdf "$1";;
 	ppt) unoconv -f pdf "$1";;
 	pptx) unoconv -f pdf "$1";;
-        docx) unoconv -f pdf "$1";;
+	docx) unoconv -f pdf "$1";;
 	txt) enscript -j -p -B --margins=10:10: -X dos -o "$base.ps" "$1" && ps2pdf "$base.ps" "$base.pdf" && rm "$base.ps" ;;
 	chm) chm2pdf --book $1 $base.pdf;;
 	epub) pandoc -s --pdf-engine=xelatex -t latex "$1" -o "$base.pdf" ;;
