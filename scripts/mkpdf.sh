@@ -24,11 +24,13 @@ function usage ()
 #  Handle command line arguments
 #-----------------------------------------------------------------------
 
-while getopts ":hv" opt
+while getopts ":hvi" opt
 do
   case $opt in
 
 	h|help     )  usage; exit 0   ;;
+
+	# i|install  )  sudo apt install
 
 	v|version  )  echo "$0 -- Version $__ScriptVersion"; exit 0   ;;
 
